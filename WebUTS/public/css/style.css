@@ -1,0 +1,19 @@
+.jumbotron{
+    background-image: url('/img/headerbook.jpg');
+
+}
+
+.album-card{
+    height: 500px;
+    width: 500px
+
+    ;
+   
+}
+.table > tbody >tr > * {
+    vertical-align:middle;
+}
+
+.cover {
+    width: 70px
+}

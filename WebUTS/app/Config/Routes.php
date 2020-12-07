@@ -16,8 +16,8 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
-$routes->setDefaultMethod('index');
+$routes->setDefaultController('libcontrol');
+$routes->setDefaultMethod('buku');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
@@ -30,7 +30,18 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'libcontrol::index');
+$routes->get('/about', 'libcontrol::about');
+$routes->get('/admin', 'libcontrol::pinjam');
+$routes->get('/buku', 'libcontrol::buku');
+$routes->get('/admin/create', 'libcontrol::create');
+$routes->get('/admin/edit/(:segment)', 'libcontrol::edit/$1');
+$routes->get('/admin/save', 'libcontrol::save');
+$routes->delete('/admin/(:num)', 'libcontrol::delete/$1');
+$routes->get('/buku/(:any)', 'libcontrol::detail/$1');
+$routes->get('/admin/(:any)', 'libcontrol::detailadm/$1');
+
+
 
 /**
  * --------------------------------------------------------------------
