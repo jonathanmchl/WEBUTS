@@ -7,10 +7,11 @@ class BukuModel extends Model{
     protected $primary = 'id';
     protected $useTimestamps = True;
     protected $allowedFields = ['judul','slug','penulis','penerbit','sinopsis','cover','nomor_pinjam','nama_pinjam','status'];
-public function search ($keyword)
-{
-  return $this->table('buku')->like('judul',$keyword)-> orLike('nomor_pinjam',$keyword);
-}
+    
+    public function search ($keyword)
+    {
+      return $this->table('buku')->like('judul',$keyword)-> orLike('nomor_pinjam',$keyword);
+    }
 
     public function getBuku ($slug = false)
     {

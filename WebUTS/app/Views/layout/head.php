@@ -37,7 +37,7 @@
           <a class="dropdown-item" href="<?= base_url('/buku'); ?>">Cari Buku</a>
           <a class="dropdown-item" href="<?= base_url('/admin'); ?>">Peminjaman</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Logout</a>
+          <a class="dropdown-item" href="<?= base_url('/libcontrol/logout'); ?>">Logout</a>
         </div>
       </li>  
     </ul>
